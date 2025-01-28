@@ -1,3 +1,24 @@
+
+if(morto){
+	
+	sprite_index = spr_inimigo_porco_morto;
+	
+	// fazendo o porco sumir se a sua animação acabou
+	if(image_speed <= 0){
+		image_alpha -= 0.01;
+		
+	}
+	
+	if(image_speed <= 0){
+		// agora sim removendo o obj inimigo da cena
+		instance_destroy();
+	}
+	exit;
+}
+
+
+
+
 // verificando se o porco esta no chao
 var _chao = place_meeting(x, y+1, obj_chao);
 
@@ -24,7 +45,7 @@ if(_chao){
 	}
 	
 	// se isso acontecer, ele esta andando
-	if(velh != 0){
+	if(velh != 0 && dano == false){
 		
 		// mudando para a sprite de corrida
 		sprite_index = spr_inimigo_porco_run;
@@ -67,6 +88,17 @@ if(_chao){
 	}
 	
 	
+}
+
+// o que vem por ultimo eh o que ele da mais prioridade na hora de executar
+
+// checando se o porco esta tomando dano
+if(dano && morto == false){
+	
+	// mudando a sprite
+	sprite_index = spr_inimigo_porco_dano;
+	velh = 0;
+
 }
 
 
