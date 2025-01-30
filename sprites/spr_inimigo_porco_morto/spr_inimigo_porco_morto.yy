@@ -29,7 +29,7 @@
   "origin":7,
   "parent":{
     "name":"Porco",
-    "path":"folders/Sprites/Inimigos/Porco.yy",
+    "path":"folders/Sprites/Inimigos/etcs/Porco.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -9,6 +9,8 @@ event_inherited();
 // ele vai escolher para qual lado ele ira andar com a seguinte funcao:
 vel = choose(1, -1);
 
+estado = "normal";
+
 andando = choose(false, true);
 
 if(andando){
